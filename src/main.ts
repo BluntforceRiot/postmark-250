@@ -117,7 +117,10 @@ const renderShell = (layout: LayoutMetadata) => {
       <div class="kicker">Summer into AI Theme 1 / 8-Bit America</div>
       <h1>Postmark 250</h1>
       <p class="subtitle">A Declaration of American Memory</p>
-      <p class="tagline">"America at 250 is not one marble monument. It is a sheet of postmarks."</p>
+      <div class="intro-copy">
+        <p>America at 250 is not one marble monument. It is a sheet of postmarks: places, rituals, ruptures, inventions, screens, ballparks, lakes, migrations, homes, and unfinished arguments.</p>
+        <p>Postmark 250 is not a ranked list of the most important American events. It is a collector sheet of memory fragments: the kind of things that get stamped into people, families, regions, and screens.</p>
+      </div>
     </header>
 
     <main>
@@ -162,9 +165,9 @@ const renderShell = (layout: LayoutMetadata) => {
         </div>
         <div class="about-copy">
           <p>Built for Summer into AI Theme 1: 8-Bit America.</p>
-          <p>This is not a ranked list of America's most important events. It is a curated sheet of American memory fragments.</p>
-          <p>The artifact interprets America at 250 through places, rituals, ruptures, inventions, screens, ballparks, lakes, migrations, homes, and unfinished arguments.</p>
-          <p>Visual design is AI-assisted and human-curated. The provided collector sheet is the source artifact; this webpage is the small interactive museum kiosk around it.</p>
+          <p>Postmark 250 is a static public browser artifact: no backend, login, database, analytics, or user submissions.</p>
+          <p>The full collector sheet is the hero artifact. The clickable stamp cards add context and proof that the sheet works as a tiny retro postal archive.</p>
+          <p>Visual design is AI-assisted; the curation, editing, implementation, and final assembly are human-directed. The provided collector sheet remains the source artifact.</p>
         </div>
       </section>
     </main>
@@ -195,12 +198,20 @@ const openModal = (index: number) => {
       <img src="${stampImagePath(stamp)}" alt="${escapeAttribute(stamp.title)} stamp detail" />
     </div>
     <div class="modal-text">
-      <p class="modal-number">Postmark ${String(activeIndex + 1).padStart(2, '0')} of 12</p>
+      <p class="modal-number">POSTMARK MEMORY CARD / ${String(activeIndex + 1).padStart(2, '0')} OF 12</p>
       <h2 id="modal-title">${stamp.title}</h2>
-      <p class="modal-category">${stamp.category}</p>
+      <div class="archive-field">
+        <span>CATEGORY</span>
+        <p class="modal-category">${stamp.category}</p>
+      </div>
+      <p class="modal-hook">${stamp.hook}</p>
       <p>${stamp.description}</p>
-      <h3>Why it belongs</h3>
+      <h3>WHY IT BELONGS</h3>
       <p>${stamp.why}</p>
+      <div class="final-postmark">
+        <span>FINAL POSTMARK</span>
+        <strong>${stamp.postmark}</strong>
+      </div>
       <div class="modal-actions">
         <button type="button" class="modal-prev">Previous</button>
         <button type="button" class="modal-next">Next</button>

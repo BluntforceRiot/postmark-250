@@ -16,7 +16,7 @@ Repo URL placeholder:
 https://github.com/<github-user-or-org>/postmark-250
 ```
 
-![Postmark 250 home screenshot](output/postmark-250-home.png)
+![Postmark 250 home screenshot](output/postmark-250-v02-home.png)
 
 ## Run Locally
 
@@ -35,7 +35,7 @@ npm run preview
 
 ## What It Is
 
-Postmark 250 is a static browser artifact for Summer into AI Theme 1: 8-Bit America. It presents one commemorative collector sheet and twelve clickable stamp memory cards. No backend, login, database, user submissions, or online leaderboard are included.
+Postmark 250 is a static browser artifact for Summer into AI Theme 1: 8-Bit America. It presents one commemorative collector sheet and twelve richer clickable memory cards. No backend, login, database, user submissions, or online leaderboard are included.
 
 ## Theme Connection
 
