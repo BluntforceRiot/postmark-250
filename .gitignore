@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+.vite
+output
+
+# Logs and review packets
+*.log
+*.zip
+BUILD_LOG_POSTMARK_250_V*.txt
+BUILD_RECEIPT_POSTMARK_250_V*.md
+
+# Local/cache
+.cache
+cache
+coverage
+*.local
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea

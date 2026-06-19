@@ -1,0 +1,137 @@
+{
+  "project": "Postmark 250",
+  "subtitle": "A Declaration of American Memory",
+  "collector_sheet_size_px": {
+    "width": 1055,
+    "height": 1491
+  },
+  "stamp_titles": [
+    "GICHI-GAMI",
+    "BLUE LAKE RESTORED",
+    "COPPER COUNTRY FINNS",
+    "JUNETEENTH",
+    "THE CONSERVATION CORPS",
+    "WARDENCLYFFE",
+    "THE SPEAKEASY",
+    "AROUND THE RADIO",
+    "TGIF",
+    "FOURTH INNING FIREWORKS",
+    "HOME FOR CHRISTMAS",
+    "FIRST CONNECTION"
+  ],
+  "high_res_individual_stamp_files": [
+    "01_gichi_gami.png",
+    "02_blue_lake_restored.png",
+    "03_copper_country_finns.png",
+    "04_juneteenth.png",
+    "05_the_conservation_corps.png",
+    "06_wardenclyffe.png",
+    "07_the_speakeasy.png",
+    "08_around_the_radio.png",
+    "09_tgif.png",
+    "10_fourth_inning_fireworks.png",
+    "11_home_for_christmas.png",
+    "12_first_connection.png"
+  ],
+  "collector_crop_files": [
+    "01_gichi_gami_collector_crop.png",
+    "02_blue_lake_restored_collector_crop.png",
+    "03_copper_country_finns_collector_crop.png",
+    "04_juneteenth_collector_crop.png",
+    "05_the_conservation_corps_collector_crop.png",
+    "06_wardenclyffe_collector_crop.png",
+    "07_the_speakeasy_collector_crop.png",
+    "08_around_the_radio_collector_crop.png",
+    "09_tgif_collector_crop.png",
+    "10_fourth_inning_fireworks_collector_crop.png",
+    "11_home_for_christmas_collector_crop.png",
+    "12_first_connection_collector_crop.png"
+  ],
+  "collector_slots_px": [
+    {
+      "title": "GICHI-GAMI",
+      "x": 45,
+      "y": 240,
+      "width": 315,
+      "height": 326
+    },
+    {
+      "title": "BLUE LAKE RESTORED",
+      "x": 355,
+      "y": 240,
+      "width": 325,
+      "height": 326
+    },
+    {
+      "title": "COPPER COUNTRY FINNS",
+      "x": 679,
+      "y": 240,
+      "width": 329,
+      "height": 326
+    },
+    {
+      "title": "JUNETEENTH",
+      "x": 45,
+      "y": 559,
+      "width": 315,
+      "height": 325
+    },
+    {
+      "title": "THE CONSERVATION CORPS",
+      "x": 355,
+      "y": 559,
+      "width": 325,
+      "height": 325
+    },
+    {
+      "title": "WARDENCLYFFE",
+      "x": 679,
+      "y": 559,
+      "width": 329,
+      "height": 325
+    },
+    {
+      "title": "THE SPEAKEASY",
+      "x": 45,
+      "y": 879,
+      "width": 315,
+      "height": 311
+    },
+    {
+      "title": "AROUND THE RADIO",
+      "x": 355,
+      "y": 879,
+      "width": 325,
+      "height": 311
+    },
+    {
+      "title": "TGIF",
+      "x": 679,
+      "y": 879,
+      "width": 329,
+      "height": 311
+    },
+    {
+      "title": "FOURTH INNING FIREWORKS",
+      "x": 45,
+      "y": 1179,
+      "width": 315,
+      "height": 282
+    },
+    {
+      "title": "HOME FOR CHRISTMAS",
+      "x": 355,
+      "y": 1179,
+      "width": 325,
+      "height": 282
+    },
+    {
+      "title": "FIRST CONNECTION",
+      "x": 679,
+      "y": 1179,
+      "width": 329,
+      "height": 282
+    }
+  ],
+  "notes": "High-res individual stamps are opaque crops from the approved 6-stamp sheets. Collector crops retain the parchment around each stamp as it appears in the final combined sheet."
+}
