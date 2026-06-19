@@ -1,7 +1,7 @@
 {
-  "name": "postmark-250",
-  "description": "Postmark 250 static interactive stamp sheet for Summer into AI Theme 1.",
-  "version": "0.3.0",
+  "name": "postmark-250-archive",
+  "description": "Two static Summer into AI Theme 1 artifacts: Postmark 250 and The Republic Room.",
+  "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
