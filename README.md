@@ -4,19 +4,11 @@
 
 ## Demo
 
-Demo URL placeholder:
+[Public demo](https://bluntforceriot.github.io/postmark-250/)
 
-```text
-https://<github-user-or-org>.github.io/postmark-250/
-```
+[GitHub repo](https://github.com/BluntforceRiot/postmark-250)
 
-Repo URL placeholder:
-
-```text
-https://github.com/<github-user-or-org>/postmark-250
-```
-
-![Postmark 250 home screenshot](output/postmark-250-v02-home.png)
+![Postmark 250 home screenshot](output/postmark-250-v03-home.png)
 
 ## Run Locally
 

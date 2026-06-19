@@ -3,8 +3,8 @@
 ## Required Links
 
 - Substack post URL: `TODO`
-- Demo URL: `TODO`
-- GitHub repo URL: `TODO`
+- Demo URL: `https://bluntforceriot.github.io/postmark-250/`
+- GitHub repo URL: `https://github.com/BluntforceRiot/postmark-250`
 
 ## Theme Alignment
 
@@ -19,6 +19,7 @@ Placeholder: add one comparable Theme 1 project or inspiration after browsing th
 - Static public browser demo
 - Original provided Postmark 250 asset pack used as source of truth
 - Clickable twelve-stamp collector sheet
+- Artifact-forward v0.3 layout with collector sheet visible from the home fold
 - No backend or login
 - Clear AI usage disclosure
 - Submission docs and screenshots included

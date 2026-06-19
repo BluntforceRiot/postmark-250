@@ -114,13 +114,24 @@ const renderStampGrid = () =>
 const renderShell = (layout: LayoutMetadata) => {
   app.innerHTML = `
     <header class="site-header">
-      <div class="kicker">Summer into AI Theme 1 / 8-Bit America</div>
-      <h1>Postmark 250</h1>
-      <p class="subtitle">A Declaration of American Memory</p>
-      <div class="intro-copy">
-        <p>America at 250 is not one marble monument. It is a sheet of postmarks: places, rituals, ruptures, inventions, screens, ballparks, lakes, migrations, homes, and unfinished arguments.</p>
-        <p>Postmark 250 is not a ranked list of the most important American events. It is a collector sheet of memory fragments: the kind of things that get stamped into people, families, regions, and screens.</p>
+      <div class="hero-copy">
+        <div class="kicker">Summer into AI Theme 1 / 8-Bit America</div>
+        <h1>Postmark 250</h1>
+        <p class="subtitle">A Declaration of American Memory</p>
+        <div class="intro-copy">
+          <p>America at 250 is not one marble monument. It is a sheet of postmarks: places, rituals, ruptures, inventions, screens, ballparks, lakes, migrations, homes, and unfinished arguments.</p>
+          <p>Postmark 250 is not a ranked list of the most important American events. It is a collector sheet of memory fragments: the kind of things that get stamped into people, families, regions, and screens.</p>
+        </div>
       </div>
+
+      <a class="hero-preview" href="#collector-title" aria-label="Jump to the interactive collector sheet">
+        <span>Collector sheet preview</span>
+        <img
+          src="${paths.collectorSheet}"
+          alt="Preview crop of the Postmark 250 collector sheet"
+        />
+        <strong>Click any stamp.</strong>
+      </a>
     </header>
 
     <main>
@@ -129,6 +140,7 @@ const renderShell = (layout: LayoutMetadata) => {
           <p class="eyebrow">Interactive Collector Sheet</p>
           <h2 id="collector-title">Click a stamp to open its memory card.</h2>
         </div>
+        <p class="sheet-instruction">Click any stamp on the sheet, or use the archive buttons below.</p>
 
         <div class="collector-frame">
           <div class="collector-stage">
@@ -195,7 +207,9 @@ const openModal = (index: number) => {
 
   content.innerHTML = `
     <div class="modal-image-wrap">
-      <img src="${stampImagePath(stamp)}" alt="${escapeAttribute(stamp.title)} stamp detail" />
+      <div class="stamp-mat">
+        <img src="${stampImagePath(stamp)}" alt="${escapeAttribute(stamp.title)} stamp detail" />
+      </div>
     </div>
     <div class="modal-text">
       <p class="modal-number">POSTMARK MEMORY CARD / ${String(activeIndex + 1).padStart(2, '0')} OF 12</p>

@@ -14,11 +14,11 @@ Built for Summer into AI Theme 1: 8-Bit America. The project frames American mem
 
 ## Public Demo URL
 
-Placeholder: `https://<github-user-or-org>.github.io/postmark-250/`
+`https://bluntforceriot.github.io/postmark-250/`
 
 ## Repo URL
 
-Placeholder: `https://github.com/<github-user-or-org>/postmark-250`
+`https://github.com/BluntforceRiot/postmark-250`
 
 ## Substack URL
 
@@ -45,7 +45,7 @@ Placeholder: `https://substack.com/@<name>/p/<post>`
 
 ## What Remains Prototype
 
-- Final public URLs are placeholders until the repo/demo/Substack are published.
+- Substack URL remains a placeholder until the post is published.
 - No analytics, backend, database, or submission system.
 - The site uses the provided asset pack as-is; no final post-production beyond responsive presentation.
 
