@@ -548,7 +548,7 @@ const renderInspectModal = (run: RepublicRun) => {
             <strong>${escapeHtml(object.iconLabel)}</strong>
           </div>
           <div class="relic-inspect-copy">
-            <p class="modal-number">${object.kind === 'relic' ? 'CATALOGED RELIC' : 'ARCHIVE DECOY'}</p>
+            <p class="modal-number">RELIC INSPECTION</p>
             <h2 id="inspect-title">${escapeHtml(object.relicName ?? object.objectName)}</h2>
             <div class="archive-field">
               <span>ROOM OBJECT</span>
@@ -575,7 +575,7 @@ const renderRepublicRoom = (run: RepublicRun) => `
         <p class="kicker">The Republic Room</p>
         <h1>A Postmark 250 Puzzle Kiosk</h1>
       </div>
-      <button class="archive-button" type="button" data-republic-reset>New Run</button>
+      <button class="archive-button" type="button" data-republic-reset>New Archive Request</button>
     </section>
 
     ${run.feedback ? `<p class="room-feedback">${escapeHtml(run.feedback)}</p>` : ''}
@@ -615,14 +615,14 @@ const renderRepublicFinalReveal = (run: RepublicRun) => `
     <section class="final-reveal" aria-labelledby="final-reveal-title">
       <div>
         <p class="kicker">Memory Cabinet Unlocked</p>
-        <h1 id="final-reveal-title">The sheet is revealed.</h1>
+        <h1 id="final-reveal-title">ARCHIVE OPENED</h1>
         <p class="subtitle">America at 250 is not one marble monument. It is a sheet of postmarks.</p>
       </div>
-      <img src="${paths.collectorSheet}" alt="Postmark 250 collector sheet revealed inside the cabinet" />
       <div class="final-actions">
         <a class="artifact-button" href="${routeLinks.postmark}">View Collector Sheet</a>
         <button class="artifact-button secondary" type="button" data-republic-start>Play Again</button>
       </div>
+      <img src="${paths.collectorSheet}" alt="Postmark 250 collector sheet revealed inside the cabinet" />
       <p class="room-feedback">Solved relics: ${run.matchedStampIds
         .map((stampId) => stampById.get(stampId)?.title)
         .filter(Boolean)
@@ -796,6 +796,11 @@ app.addEventListener('click', (event) => {
   }
 
   if (target.closest('[data-republic-close]')) {
+    closeRepublicInspection();
+    return;
+  }
+
+  if (target.classList.contains('relic-modal-backdrop')) {
     closeRepublicInspection();
     return;
   }

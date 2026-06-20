@@ -10,7 +10,7 @@ A tiny retro point-and-click archive puzzle. Each run selects three Postmark 250
 
 ## Theme Connection
 
-The Republic Room fits Theme 1: 8-Bit America because it turns America at 250 into a tiny retro archive puzzle. Players interact with stamp-based American memory fragments as relics in a clickable old-screen museum kiosk.
+The Republic Room fits Theme 1: 8-Bit America because it turns America at 250 into a small retro museum-kiosk puzzle. Players interact with stamp-based American memory fragments as clickable relics in an old-screen archive room.
 
 ## Direct Demo URL
 
@@ -43,9 +43,10 @@ Placeholder: `https://substack.com/@<name>/p/<post>`
 - At least eight implemented stamp/relic pairs
 - Decoy object pool
 - CSS/HTML artifact icons for relics and decoys
-- Inspect modal with object visual, clue text, and active stamp choices
+- Neutral inspect modal with object visual, clue text, and active stamp choices
 - Correct-match seal progress with a cabinet object
 - Gentle wrong-guess feedback with no penalty
+- New Archive Request reset flow
 - Final cabinet reveal linking back to Postmark 250
 
 ## What Remains Prototype

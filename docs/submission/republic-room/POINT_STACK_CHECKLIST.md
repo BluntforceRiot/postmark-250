@@ -8,7 +8,7 @@
 
 ## Theme Alignment
 
-The Republic Room fits Theme 1: 8-Bit America because it turns America at 250 into a tiny retro archive puzzle. Players interact with stamp-based American memory fragments as relics in a clickable old-screen museum kiosk.
+The Republic Room fits Theme 1: 8-Bit America because it turns America at 250 into a small retro museum-kiosk puzzle. Players interact with stamp-based American memory fragments as clickable relics in an old-screen archive room.
 
 ## Competitor Reference
 
@@ -20,6 +20,7 @@ Placeholder: add one comparable Theme 1 project or inspiration after browsing th
 - One room, one cabinet, one clean puzzle loop
 - Three active stamps selected each run
 - Clickable visible relics and decoys
+- Neutral inspect modal that does not leak decoy/correct state before a guess
 - No harsh penalty for wrong guesses
 - Final reveal points to the Postmark 250 collector sheet
 - Distinct route and docs from the Postmark 250 gallery

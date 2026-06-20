@@ -93,74 +93,74 @@ export const relicMemories: RelicMemory[] = [
 export const decoyObjects: DecoyObject[] = [
   {
     id: 'generic-lantern',
-    objectName: 'generic lantern',
-    clue: 'Useful light, wrong memory.',
+    objectName: 'old lantern',
+    clue: 'Warm glass from a public room after closing.',
     iconLabel: 'LAMP'
   },
   {
     id: 'old-key',
     objectName: 'old key',
-    clue: 'It opens something, just not this cabinet.',
+    clue: 'A brass tooth with no label on the tag.',
     iconLabel: 'KEY'
   },
   {
     id: 'blank-postcard',
     objectName: 'blank postcard',
-    clue: 'No postmark, no memory assigned.',
+    clue: 'Cream paper, empty address line, waiting for a place.',
     iconLabel: 'CARD'
   },
   {
     id: 'eagle-figurine',
     objectName: 'eagle figurine',
-    clue: 'Symbolic, but too general for the active stamps.',
+    clue: 'A small civic mascot from a dusty shelf.',
     iconLabel: 'EAGLE'
   },
   {
     id: 'tea-cup',
     objectName: 'tea cup',
-    clue: 'A little ceremony, a little misdirection.',
+    clue: 'Porcelain with a faint ring of ceremony.',
     iconLabel: 'TEA'
   },
   {
     id: 'county-fair-ribbon',
     objectName: 'county fair ribbon',
-    clue: 'Blue ribbon, wrong shelf.',
+    clue: 'A prize ribbon from a summer table near the midway.',
     iconLabel: 'RIBBON'
   },
   {
     id: 'snow-globe',
     objectName: 'snow globe',
-    clue: 'Shakeable nostalgia with no active match.',
+    clue: 'Winter sealed in glass, town square held under snow.',
     iconLabel: 'SNOW'
   },
   {
     id: 'telegraph-key',
     objectName: 'telegraph key',
-    clue: 'A signal machine from a neighboring archive.',
+    clue: 'A signal machine with a click you can almost hear.',
     iconLabel: 'WIRE'
   },
   {
     id: 'empty-frame',
     objectName: 'empty frame',
-    clue: 'Waiting for a picture that is not in this round.',
+    clue: 'A missing portrait leaves a rectangle of dust.',
     iconLabel: 'FRAME'
   },
   {
     id: 'cracked-bell',
     objectName: 'cracked bell',
-    clue: 'A loud symbol, but not one of today\'s relics.',
+    clue: 'A small bell with a quiet split across the lip.',
     iconLabel: 'BELL'
   },
   {
     id: 'generic-parchment',
     objectName: 'generic parchment',
-    clue: 'A document without a useful postmark.',
+    clue: 'A folded page with official-looking blank space.',
     iconLabel: 'DOC'
   },
   {
     id: 'compass',
     objectName: 'compass',
-    clue: 'It points, but not to an active stamp.',
+    clue: 'A needle under glass, steady enough to argue with.',
     iconLabel: 'NORTH'
   }
 ];
