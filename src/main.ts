@@ -95,6 +95,8 @@ const escapeHtml = (value: string) =>
 
 const escapeAttribute = escapeHtml;
 
+const objectVisualClass = (iconLabel: string) => `visual-${iconLabel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+
 const shuffle = <T>(items: T[]) => {
   const copy = [...items];
 
@@ -447,7 +449,7 @@ const renderActiveStampCards = (run: RepublicRun) =>
         <article class="active-stamp-card ${matched ? 'matched' : ''}">
           <img src="${cropImagePath(stamp)}" alt="${escapeAttribute(stamp.title)} crop" />
           <div>
-            <span>${matched ? 'MATCHED' : 'LOCATE'}</span>
+            <span class="stamp-status">${matched ? 'STAMPED' : 'UNMATCHED'}</span>
             <strong>${escapeHtml(stamp.title)}</strong>
           </div>
         </article>
@@ -466,13 +468,15 @@ const renderRoomObjects = (run: RepublicRun) =>
 
       return `
         <button
-          class="room-object ${object.kind} ${matched ? 'matched' : ''}"
+          class="room-object ${object.kind} ${objectVisualClass(object.iconLabel)} ${matched ? 'matched' : ''}"
           type="button"
           data-room-object-id="${escapeAttribute(object.id)}"
           style="${style}"
+          aria-label="Inspect ${escapeAttribute(object.objectName)}"
         >
-          <span class="object-icon">${escapeHtml(object.iconLabel)}</span>
-          <span class="object-name">${escapeHtml(object.objectName)}</span>
+          <span class="object-art" aria-hidden="true"></span>
+          <span class="object-room-label">${escapeHtml(object.iconLabel)}</span>
+          <span class="sr-only">${escapeHtml(object.objectName)}</span>
         </button>
       `;
     })
@@ -480,14 +484,26 @@ const renderRoomObjects = (run: RepublicRun) =>
 
 const renderCabinet = (run: RepublicRun) => {
   const progress = run.matchedStampIds.length;
-  const seals = [0, 1, 2]
-    .map((index) => `<span class="cabinet-seal ${index < progress ? 'lit' : ''}">${index < progress ? 'OPEN' : 'SEAL'}</span>`)
+  const sealNames = ['SEAL I', 'SEAL II', 'SEAL III'];
+  const seals = sealNames
+    .map(
+      (sealName, index) => `
+        <span class="cabinet-seal ${index < progress ? 'lit' : ''}">
+          <strong>${sealName}</strong>
+          <em>${index < progress ? 'OPEN' : 'LOCKED'}</em>
+        </span>
+      `
+    )
     .join('');
 
   return `
-    <aside class="memory-cabinet" aria-label="Memory cabinet progress">
+    <aside class="memory-cabinet ${progress >= 3 ? 'unlocked' : ''}" aria-label="Memory cabinet progress">
       <p class="eyebrow">Memory Cabinet</p>
       <h2>${progress}/3</h2>
+      <div class="cabinet-object" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </div>
       <div class="cabinet-seals">${seals}</div>
       <p>Match all three relics to unlock the collector sheet.</p>
     </aside>
@@ -527,14 +543,19 @@ const renderInspectModal = (run: RepublicRun) => {
       <section class="relic-modal" role="dialog" aria-modal="true" aria-labelledby="inspect-title">
         <button class="modal-close" type="button" data-republic-close aria-label="Close relic inspection">Close</button>
         <div class="relic-inspect-grid">
-          <div class="relic-object-preview ${object.kind}">
-            <span>${escapeHtml(object.iconLabel)}</span>
+          <div class="relic-object-preview ${object.kind} ${objectVisualClass(object.iconLabel)}">
+            <span class="object-art large" aria-hidden="true"></span>
+            <strong>${escapeHtml(object.iconLabel)}</strong>
           </div>
           <div class="relic-inspect-copy">
             <p class="modal-number">${object.kind === 'relic' ? 'CATALOGED RELIC' : 'ARCHIVE DECOY'}</p>
             <h2 id="inspect-title">${escapeHtml(object.relicName ?? object.objectName)}</h2>
-            <p>${escapeHtml(object.clue)}</p>
-            ${matched ? '<p class="inspect-feedback correct">POSTMARK MATCHED</p>' : ''}
+            <div class="archive-field">
+              <span>ROOM OBJECT</span>
+              <p class="modal-category">${escapeHtml(object.objectName)}</p>
+            </div>
+            <p class="modal-hook">${escapeHtml(object.clue)}</p>
+            ${matched ? '<p class="inspect-feedback correct">POSTMARK MATCHED.</p>' : ''}
             ${run.inspectFeedback ? `<p class="inspect-feedback">${escapeHtml(run.inspectFeedback)}</p>` : ''}
             <div class="match-buttons" aria-label="Choose matching stamp">
               ${stampButtons}
@@ -561,7 +582,8 @@ const renderRepublicRoom = (run: RepublicRun) => `
 
     <section class="room-layout" aria-label="Republic Room puzzle">
       <aside class="relic-panel">
-        <p class="eyebrow">Relics to locate</p>
+        <p class="eyebrow">Archive Request</p>
+        <h2>Locate these 3 memory relics</h2>
         <div class="active-stamps">
           ${renderActiveStampCards(run)}
         </div>
@@ -570,9 +592,11 @@ const renderRepublicRoom = (run: RepublicRun) => `
 
       <section class="room-center" aria-label="Clickable archive room">
         <div class="room-stage">
+          <div class="room-wall-trim"></div>
+          <div class="room-label">REPUBLIC ROOM / RELIC BAY</div>
           <div class="room-window"></div>
-          <div class="room-shelf shelf-left"></div>
-          <div class="room-shelf shelf-right"></div>
+          <div class="room-shelf shelf-left"><span></span></div>
+          <div class="room-shelf shelf-right"><span></span></div>
           <div class="room-desk"></div>
           <div class="room-floor"></div>
           ${renderRoomObjects(run)}
@@ -685,7 +709,7 @@ const assignRepublicStamp = (stampId: string) => {
 
   if (object.stampId === stampId && !republicRun.matchedStampIds.includes(stampId)) {
     republicRun.matchedStampIds = [...republicRun.matchedStampIds, stampId];
-    republicRun.feedback = 'POSTMARK MATCHED';
+    republicRun.feedback = republicRun.matchedStampIds.length >= 3 ? 'MEMORY CABINET UNLOCKED.' : 'POSTMARK MATCHED.';
     republicRun.inspectObjectId = undefined;
     republicRun.inspectFeedback = undefined;
 

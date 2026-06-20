@@ -42,6 +42,7 @@ Placeholder: `https://substack.com/@<name>/p/<post>`
 - Twelve-card stamp grid
 - Modal memory cards with previous/next navigation
 - Separate archive-hub route and submission docs
+- Submission 2 route remains distinct from The Republic Room puzzle route
 
 ## What Remains Prototype
 

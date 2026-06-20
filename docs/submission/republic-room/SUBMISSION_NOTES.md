@@ -37,19 +37,20 @@ Placeholder: `https://substack.com/@<name>/p/<post>`
 
 - Static Republic Room route
 - Title/start panel and how-to panel
-- One-room clickable archive scene
+- One-room clickable archive scene with polished wall, floor, desk, shelves, and cabinet staging
 - Three active stamps per randomized run
 - Ten visible room objects per run
 - At least eight implemented stamp/relic pairs
 - Decoy object pool
-- Inspect modal with clue text and active stamp choices
-- Correct-match seal progress
+- CSS/HTML artifact icons for relics and decoys
+- Inspect modal with object visual, clue text, and active stamp choices
+- Correct-match seal progress with a cabinet object
 - Gentle wrong-guess feedback with no penalty
 - Final cabinet reveal linking back to Postmark 250
 
 ## What Remains Prototype
 
-- Relic objects use CSS/HTML labels rather than final object art.
+- Relic objects use CSS/HTML icon work rather than final illustrated object art.
 - No backend, database, analytics, login, or user submissions.
 - No audio or persistent puzzle score is included.
 
