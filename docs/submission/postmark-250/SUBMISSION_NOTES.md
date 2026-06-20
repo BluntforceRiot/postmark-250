@@ -16,6 +16,10 @@ Built for Summer into AI Theme 1: 8-Bit America. The project frames American mem
 
 `https://bluntforceriot.github.io/postmark-250/#/postmark-250/`
 
+## Archive Hub URL
+
+`https://bluntforceriot.github.io/postmark-250/`
+
 ## Repo URL
 
 `https://github.com/BluntforceRiot/postmark-250`
@@ -23,6 +27,8 @@ Built for Summer into AI Theme 1: 8-Bit America. The project frames American mem
 ## Substack URL
 
 Placeholder: `https://substack.com/@<name>/p/<post>`
+
+Postmark 250 will receive its own Substack post separate from The Republic Room.
 
 ## Tools Used
 
@@ -43,6 +49,7 @@ Placeholder: `https://substack.com/@<name>/p/<post>`
 - Modal memory cards with previous/next navigation
 - Separate archive-hub route and submission docs
 - Submission 2 route remains distinct from The Republic Room puzzle route
+- Shared repo/assets are intentional; each artifact has its own direct proof URL.
 
 ## What Remains Prototype
 

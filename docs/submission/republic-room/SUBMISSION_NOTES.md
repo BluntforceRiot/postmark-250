@@ -16,6 +16,10 @@ The Republic Room fits Theme 1: 8-Bit America because it turns America at 250 in
 
 `https://bluntforceriot.github.io/postmark-250/#/republic-room/`
 
+## Archive Hub URL
+
+`https://bluntforceriot.github.io/postmark-250/`
+
 ## Repo URL
 
 `https://github.com/BluntforceRiot/postmark-250`
@@ -23,6 +27,8 @@ The Republic Room fits Theme 1: 8-Bit America because it turns America at 250 in
 ## Substack URL
 
 Placeholder: `https://substack.com/@<name>/p/<post>`
+
+The Republic Room will receive its own Substack post separate from Postmark 250.
 
 ## Tools Used
 
@@ -48,6 +54,7 @@ Placeholder: `https://substack.com/@<name>/p/<post>`
 - Gentle wrong-guess feedback with no penalty
 - New Archive Request reset flow
 - Final cabinet reveal linking back to Postmark 250
+- Shared repo/assets are intentional; this puzzle has its own direct proof URL.
 
 ## What Remains Prototype
 

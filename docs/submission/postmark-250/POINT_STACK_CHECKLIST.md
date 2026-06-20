@@ -3,6 +3,7 @@
 ## Required Links
 
 - Substack post URL: `TODO`
+- Archive hub URL: `https://bluntforceriot.github.io/postmark-250/`
 - Demo URL: `https://bluntforceriot.github.io/postmark-250/#/postmark-250/`
 - GitHub repo URL: `https://github.com/BluntforceRiot/postmark-250`
 
@@ -21,6 +22,7 @@ Placeholder: add one comparable Theme 1 project or inspiration after browsing th
 - Clickable twelve-stamp collector sheet
 - Artifact-forward v0.3 layout preserved
 - Distinct route from The Republic Room puzzle
+- Same repo, separate submission route and planned Substack post
 - No backend or login
 - Clear AI usage disclosure
 - Submission docs and screenshots included

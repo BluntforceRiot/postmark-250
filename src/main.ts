@@ -62,6 +62,7 @@ let activeIndex = 0;
 let metadata: LayoutMetadata | undefined;
 let republicRun: RepublicRun | undefined;
 let republicHowToOpen = false;
+let audioContext: AudioContext | undefined;
 
 const stampByTitle = new Map(stamps.map((stamp) => [stamp.title, stamp]));
 const stampById = new Map(stamps.map((stamp) => [stamp.id, stamp]));
@@ -106,6 +107,54 @@ const shuffle = <T>(items: T[]) => {
   }
 
   return copy;
+};
+
+const getAudioContext = () => {
+  if (!window.AudioContext) {
+    return undefined;
+  }
+
+  audioContext ??= new AudioContext();
+  void audioContext.resume();
+
+  return audioContext;
+};
+
+const playTone = (frequency: number, duration = 0.12, delay = 0, volume = 0.035) => {
+  const context = getAudioContext();
+
+  if (!context) {
+    return;
+  }
+
+  const oscillator = context.createOscillator();
+  const gain = context.createGain();
+  const start = context.currentTime + delay;
+  const end = start + duration;
+
+  oscillator.type = 'square';
+  oscillator.frequency.setValueAtTime(frequency, start);
+  gain.gain.setValueAtTime(0.0001, start);
+  gain.gain.exponentialRampToValueAtTime(volume, start + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.0001, end);
+  oscillator.connect(gain).connect(context.destination);
+  oscillator.start(start);
+  oscillator.stop(end + 0.02);
+};
+
+const playCorrectCue = () => {
+  playTone(523.25);
+  playTone(659.25, 0.12, 0.08);
+};
+
+const playWrongCue = () => {
+  playTone(196, 0.1, 0, 0.025);
+};
+
+const playUnlockCue = () => {
+  playTone(392, 0.12);
+  playTone(523.25, 0.13, 0.08);
+  playTone(783.99, 0.18, 0.18);
 };
 
 const resolveRoute = (): RouteName => {
@@ -193,10 +242,12 @@ const renderHub = () => {
     ${renderArchiveNav('hub')}
     <main class="hub-shell">
       <section class="hub-hero" aria-labelledby="hub-title">
+        <div class="hub-stamp-mark" aria-hidden="true">250</div>
         <p class="kicker">Summer into AI Theme 1 / 8-Bit America</p>
         <h1 id="hub-title">Postmark 250 Archive</h1>
-        <p class="subtitle">Two distinct public artifacts from one vintage postal kiosk.</p>
-        <p class="hub-intro">The collector sheet is the memory artifact. The Republic Room is the puzzle artifact. Shared universe, separate submissions.</p>
+        <p class="subtitle">Two submissions, one archive.</p>
+        <p class="hub-intro">The collector sheet is the memory artifact. The Republic Room is the puzzle artifact. Shared universe, separate public proof routes.</p>
+        <p class="archive-note">One shared archive. Two distinct Theme 1 artifacts.</p>
       </section>
 
       <section class="artifact-grid" aria-label="Archive artifacts">
@@ -207,7 +258,7 @@ const renderHub = () => {
             <p>A clickable commemorative stamp sheet of American memory.</p>
           </div>
           <img src="${paths.collectorSheet}" alt="Preview of the Postmark 250 collector sheet" />
-          <a class="artifact-button" href="${routeLinks.postmark}">Open Collector Sheet</a>
+          <a class="artifact-button" href="${routeLinks.postmark}">Open Postmark 250</a>
         </article>
 
         <article class="artifact-card artifact-card-room">
@@ -217,6 +268,7 @@ const renderHub = () => {
             <p>A tiny retro archive puzzle where players match relics to Postmark 250 stamps and unlock the memory cabinet.</p>
           </div>
           <div class="artifact-room-preview" aria-hidden="true">
+            <span class="preview-lamp"></span>
             <span class="preview-shelf"></span>
             <span class="preview-desk"></span>
             <span class="preview-cabinet"></span>
@@ -261,9 +313,10 @@ const renderPostmarkShell = (layout: LayoutMetadata) => {
           <p class="eyebrow">Interactive Collector Sheet</p>
           <h2 id="collector-title">Click a stamp to open its memory card.</h2>
         </div>
-        <p class="sheet-instruction">Click any stamp on the sheet, or use the archive buttons below.</p>
+        <p class="sheet-instruction">Click any stamp on the framed sheet, or use the archive buttons below.</p>
 
         <div class="collector-frame">
+          <div class="collector-frame-label">POSTMARK 250 / PUBLIC PROOF SHEET</div>
           <div class="collector-stage">
             <img
               class="collector-sheet"
@@ -616,6 +669,7 @@ const renderRepublicFinalReveal = (run: RepublicRun) => `
       <div>
         <p class="kicker">Memory Cabinet Unlocked</p>
         <h1 id="final-reveal-title">ARCHIVE OPENED</h1>
+        <p class="seal-confirmation">3/3 seals unlocked</p>
         <p class="subtitle">America at 250 is not one marble monument. It is a sheet of postmarks.</p>
       </div>
       <div class="final-actions">
@@ -715,6 +769,9 @@ const assignRepublicStamp = (stampId: string) => {
 
     if (republicRun.matchedStampIds.length >= 3) {
       republicRun.reveal = true;
+      playUnlockCue();
+    } else {
+      playCorrectCue();
     }
 
     renderRepublic();
@@ -722,6 +779,7 @@ const assignRepublicStamp = (stampId: string) => {
   }
 
   republicRun.inspectFeedback = 'Not quite. That relic belongs to a different shelf in American memory.';
+  playWrongCue();
   renderRepublic();
 };
 
@@ -759,6 +817,11 @@ app.addEventListener('click', (event) => {
   }
 
   if (target.closest('[data-modal-close]')) {
+    closeModal();
+    return;
+  }
+
+  if (target.classList.contains('modal-backdrop')) {
     closeModal();
     return;
   }

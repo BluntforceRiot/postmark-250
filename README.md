@@ -1,6 +1,6 @@
 # Postmark 250 Archive
 
-One static GitHub Pages archive containing two distinct Summer into AI Theme 1 submissions.
+One static GitHub Pages archive containing two distinct Summer into AI Theme 1 submissions. One shared archive. Two distinct Theme 1 artifacts.
 
 ## Public Demo
 
@@ -54,7 +54,7 @@ The visual asset pack is AI-assisted and human-curated. Codex was used for imple
 
 ## Proof / Scoring Note
 
-The repo contains two related but separate submissions. Postmark 250 is the memory artifact. The Republic Room is the puzzle artifact. They share data and visual language, but each has its own route, docs, screenshots, and scoring notes.
+The repo contains two related but separate submissions. Postmark 250 is the memory artifact. The Republic Room is the puzzle artifact. They share data and visual language intentionally, but each has its own direct proof URL, docs, screenshots, scoring notes, and planned Substack post.
 
 ## GitHub Pages
 
