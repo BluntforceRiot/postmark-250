@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Snow globe</title>
+  <circle cx="32" cy="29" r="19" fill="#7897b3" fill-opacity=".58" stroke="#f7ead0" stroke-width="3"/>
+  <path d="M20 37l8-9 6 6 5-7 6 10z" fill="#f7ead0" stroke="#102341" stroke-width="2"/>
+  <circle cx="25" cy="22" r="2" fill="#fff1bd"/>
+  <circle cx="38" cy="20" r="2" fill="#fff1bd"/>
+  <path d="M20 48h24l4 9H16z" fill="#70432f" stroke="#1a1320" stroke-width="3"/>
+</svg>

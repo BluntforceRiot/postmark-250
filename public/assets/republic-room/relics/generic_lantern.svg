@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Generic lantern</title>
+  <path d="M23 15c0-7 18-7 18 0" fill="none" stroke="#dfc48d" stroke-width="3"/>
+  <path d="M21 20h22v30H21z" rx="7" fill="#2c2830" stroke="#dfc48d" stroke-width="3"/>
+  <circle cx="32" cy="36" r="8" fill="#fff1bd"/>
+  <path d="M17 50h30v6H17z" fill="#70432f" stroke="#1a1320" stroke-width="2"/>
+  <path d="M25 23h14" stroke="#c89848" stroke-width="3"/>
+</svg>

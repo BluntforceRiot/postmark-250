@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Cracked bell</title>
+  <path d="M28 11h8l4 7v18l10 13H14l10-13V18z" fill="#d8af66" stroke="#1a1320" stroke-width="3"/>
+  <path d="M35 21l-5 10 7 4-5 9" fill="none" stroke="#8c2f2d" stroke-width="3"/>
+  <circle cx="32" cy="51" r="4" fill="#70432f"/>
+  <path d="M18 56h28" stroke="#101a2f" stroke-width="4"/>
+</svg>

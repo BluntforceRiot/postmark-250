@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Vacuum tube radio</title>
+  <path d="M11 24h42v25H11z" fill="#5a3427" stroke="#c89848" stroke-width="3"/>
+  <path d="M16 30h18v13H16z" fill="#101a2f" stroke="#dfc48d" stroke-width="2"/>
+  <path d="M39 31h8v8h-8z" fill="#dfc48d" stroke="#1a1320" stroke-width="2"/>
+  <circle cx="43" cy="43" r="4" fill="#c89848" stroke="#1a1320" stroke-width="2"/>
+  <path d="M18 36h14M18 40h14" stroke="#78a7b8" stroke-width="2"/>
+  <path d="M20 24c2-8 22-8 24 0" fill="none" stroke="#dfc48d" stroke-width="3"/>
+  <path d="M15 51h8M41 51h8" stroke="#1a1320" stroke-width="4"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Superior shore fragment</title>
+  <path d="M8 47h48v7H8z" fill="#0b1324" stroke="#c89848" stroke-width="2"/>
+  <path d="M12 40c9-7 13-19 24-18 8 1 12 10 16 18H12z" fill="#73856f" stroke="#1a1320" stroke-width="3"/>
+  <path d="M17 39c8-3 13-7 20-6 6 1 8 4 11 6" fill="none" stroke="#dfc48d" stroke-width="2"/>
+  <path d="M13 47c6-5 12-7 20-7s13 2 18 7" fill="#20395f" stroke="#78a7b8" stroke-width="2"/>
+  <path d="M20 31h7M33 28h6M42 34h4" stroke="#f7ead0" stroke-width="2"/>
+</svg>

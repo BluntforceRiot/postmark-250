@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Empty frame</title>
+  <path d="M14 13h36v38H14z" fill="#70432f" stroke="#1a1320" stroke-width="3"/>
+  <path d="M21 20h22v24H21z" fill="#211827" stroke="#c89848" stroke-width="3"/>
+  <path d="M24 43l17-20M24 23l17 20" stroke="#3d2a2f" stroke-width="3"/>
+  <path d="M15 55h34" stroke="#101a2f" stroke-width="4"/>
+</svg>

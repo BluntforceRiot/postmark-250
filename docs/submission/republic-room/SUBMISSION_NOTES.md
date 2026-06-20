@@ -48,7 +48,7 @@ The Republic Room will receive its own Substack post separate from Postmark 250.
 - Ten visible room objects per run
 - At least eight implemented stamp/relic pairs
 - Decoy object pool
-- CSS/HTML artifact icons for relics and decoys
+- Custom lightweight SVG artifact icons for relics and decoys
 - Neutral inspect modal with object visual, clue text, and active stamp choices
 - Correct-match seal progress with a cabinet object
 - Gentle wrong-guess feedback with no penalty
@@ -58,7 +58,7 @@ The Republic Room will receive its own Substack post separate from Postmark 250.
 
 ## What Remains Prototype
 
-- Relic objects use CSS/HTML icon work rather than final illustrated object art.
+- Relic objects use custom lightweight SVG icons rather than full illustrated sprite art.
 - No backend, database, analytics, login, or user submissions.
 - No audio or persistent puzzle score is included.
 

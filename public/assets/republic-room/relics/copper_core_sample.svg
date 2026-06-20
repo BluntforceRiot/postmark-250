@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Copper core sample</title>
+  <path d="M9 45h46v8H9z" fill="#101a2f" stroke="#c89848" stroke-width="2"/>
+  <path d="M12 34c2-9 14-14 24-9 8 4 10 15 4 21H18c-4-2-7-6-6-12z" fill="#b86439" stroke="#1a1320" stroke-width="3"/>
+  <path d="M16 36c8 2 14-8 23-4" fill="none" stroke="#e1a36f" stroke-width="3"/>
+  <path d="M42 16h13v31H42z" rx="6" fill="#2b2424" stroke="#dfc48d" stroke-width="3"/>
+  <circle cx="49" cy="31" r="6" fill="#fff1bd"/>
+  <path d="M45 47h8M43 52h12" stroke="#70432f" stroke-width="4"/>
+</svg>

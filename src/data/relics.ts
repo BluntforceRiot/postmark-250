@@ -5,6 +5,7 @@ export interface RelicMemory {
   clue: string;
   hint: string;
   iconLabel: string;
+  iconFile: string;
 }
 
 export interface DecoyObject {
@@ -12,6 +13,7 @@ export interface DecoyObject {
   objectName: string;
   clue: string;
   iconLabel: string;
+  iconFile: string;
 }
 
 export interface RoomSlot {
@@ -30,7 +32,8 @@ export const relicMemories: RelicMemory[] = [
     objectName: 'shoreline stone in a small display case',
     clue: 'Cold water, old name, older than the birthday.',
     hint: 'Look for the relic that feels like water and place.',
-    iconLabel: 'STONE'
+    iconLabel: 'STONE',
+    iconFile: 'superior_shore_fragment.svg'
   },
   {
     stampId: 'wardenclyffe',
@@ -38,7 +41,8 @@ export const relicMemories: RelicMemory[] = [
     objectName: 'brass coil and blueprint scrap',
     clue: 'A piece of a future that failed loudly enough to keep glowing.',
     hint: 'The future relic has coils and bad decisions.',
-    iconLabel: 'COIL'
+    iconLabel: 'COIL',
+    iconFile: 'tower_coil_fragment.svg'
   },
   {
     stampId: 'around-the-radio',
@@ -46,7 +50,8 @@ export const relicMemories: RelicMemory[] = [
     objectName: 'tabletop radio',
     clue: 'One box. Many rooms. A country leaning toward the same sound.',
     hint: 'The listening relic sits like a small wooden broadcast box.',
-    iconLabel: 'RADIO'
+    iconLabel: 'RADIO',
+    iconFile: 'vacuum_tube_radio.svg'
   },
   {
     stampId: 'tgif',
@@ -54,7 +59,8 @@ export const relicMemories: RelicMemory[] = [
     objectName: 'remote, pizza box, and VHS tape',
     clue: 'Couch occupied. Pizza cooling. Theme song incoming.',
     hint: 'Look for the living-room relic with Friday-night energy.',
-    iconLabel: 'REMOTE'
+    iconLabel: 'REMOTE',
+    iconFile: 'friday_night_remote.svg'
   },
   {
     stampId: 'first-connection',
@@ -62,7 +68,8 @@ export const relicMemories: RelicMemory[] = [
     objectName: 'beige modem and floppy disk',
     clue: 'The scream before the network opened.',
     hint: 'The internet relic probably made terrible noises.',
-    iconLabel: 'MODEM'
+    iconLabel: 'MODEM',
+    iconFile: 'dial_up_modem.svg'
   },
   {
     stampId: 'fourth-inning-fireworks',
@@ -70,7 +77,8 @@ export const relicMemories: RelicMemory[] = [
     objectName: 'baseball and fireworks shell',
     clue: 'Summer ritual, cheap seats, and the sky interrupting the inning.',
     hint: 'The summer relic belongs somewhere between the scoreboard and the sky.',
-    iconLabel: 'BALL'
+    iconLabel: 'BALL',
+    iconFile: 'ballpark_firework_shell.svg'
   },
   {
     stampId: 'copper-country-finns',
@@ -78,7 +86,8 @@ export const relicMemories: RelicMemory[] = [
     objectName: 'copper rock and miner lamp',
     clue: 'Work in the rock. Winter in the bones. Sisu in the walls.',
     hint: 'The mining relic carries copper, lamp-light, and winter grit.',
-    iconLabel: 'COPPER'
+    iconLabel: 'COPPER',
+    iconFile: 'copper_core_sample.svg'
   },
   {
     stampId: 'the-speakeasy',
@@ -86,7 +95,8 @@ export const relicMemories: RelicMemory[] = [
     objectName: 'hidden bottle and jazz flyer',
     clue: 'The law said dry. The city found a door.',
     hint: 'The rebellion relic has a password and a reason to whisper.',
-    iconLabel: 'PASS'
+    iconLabel: 'PASS',
+    iconFile: 'speakeasy_password_card.svg'
   }
 ];
 
@@ -95,73 +105,85 @@ export const decoyObjects: DecoyObject[] = [
     id: 'generic-lantern',
     objectName: 'old lantern',
     clue: 'Warm glass from a public room after closing.',
-    iconLabel: 'LAMP'
+    iconLabel: 'LAMP',
+    iconFile: 'generic_lantern.svg'
   },
   {
     id: 'old-key',
     objectName: 'old key',
     clue: 'A brass tooth with no label on the tag.',
-    iconLabel: 'KEY'
+    iconLabel: 'KEY',
+    iconFile: 'old_key.svg'
   },
   {
     id: 'blank-postcard',
     objectName: 'blank postcard',
     clue: 'Cream paper, empty address line, waiting for a place.',
-    iconLabel: 'CARD'
+    iconLabel: 'CARD',
+    iconFile: 'blank_postcard.svg'
   },
   {
     id: 'eagle-figurine',
     objectName: 'eagle figurine',
     clue: 'A small civic mascot from a dusty shelf.',
-    iconLabel: 'EAGLE'
+    iconLabel: 'EAGLE',
+    iconFile: 'eagle_figurine.svg'
   },
   {
     id: 'tea-cup',
     objectName: 'tea cup',
     clue: 'Porcelain with a faint ring of ceremony.',
-    iconLabel: 'TEA'
+    iconLabel: 'TEA',
+    iconFile: 'tea_cup.svg'
   },
   {
     id: 'county-fair-ribbon',
     objectName: 'county fair ribbon',
     clue: 'A prize ribbon from a summer table near the midway.',
-    iconLabel: 'RIBBON'
+    iconLabel: 'RIBBON',
+    iconFile: 'county_fair_ribbon.svg'
   },
   {
     id: 'snow-globe',
     objectName: 'snow globe',
     clue: 'Winter sealed in glass, town square held under snow.',
-    iconLabel: 'SNOW'
+    iconLabel: 'SNOW',
+    iconFile: 'snow_globe.svg'
   },
   {
     id: 'telegraph-key',
     objectName: 'telegraph key',
     clue: 'A signal machine with a click you can almost hear.',
-    iconLabel: 'WIRE'
+    iconLabel: 'WIRE',
+    iconFile: 'telegraph_key.svg'
   },
   {
     id: 'empty-frame',
     objectName: 'empty frame',
     clue: 'A missing portrait leaves a rectangle of dust.',
-    iconLabel: 'FRAME'
+    iconLabel: 'FRAME',
+    iconFile: 'empty_frame.svg'
   },
   {
     id: 'cracked-bell',
     objectName: 'cracked bell',
     clue: 'A small bell with a quiet split across the lip.',
-    iconLabel: 'BELL'
+    iconLabel: 'BELL',
+    iconFile: 'cracked_bell.svg'
   },
   {
     id: 'generic-parchment',
     objectName: 'generic parchment',
     clue: 'A folded page with official-looking blank space.',
-    iconLabel: 'DOC'
+    iconLabel: 'DOC',
+    iconFile: 'generic_parchment.svg'
   },
   {
     id: 'compass',
     objectName: 'compass',
     clue: 'A needle under glass, steady enough to argue with.',
-    iconLabel: 'NORTH'
+    iconLabel: 'NORTH',
+    iconFile: 'compass.svg'
   }
 ];
 

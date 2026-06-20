@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Generic parchment</title>
+  <path d="M15 12h31c5 0 6 6 2 9v30H18c-5 0-6-6-2-9z" fill="#dfc48d" stroke="#1a1320" stroke-width="3"/>
+  <path d="M19 23h22M19 31h18M19 39h20" stroke="#8c2f2d" stroke-width="2"/>
+  <path d="M44 12c5 0 6 6 2 9h-7c4-3 4-9-1-9z" fill="#c89848" stroke="#1a1320" stroke-width="2"/>
+  <path d="M14 55h36" stroke="#101a2f" stroke-width="4"/>
+</svg>

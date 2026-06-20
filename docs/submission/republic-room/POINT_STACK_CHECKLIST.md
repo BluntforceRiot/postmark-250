@@ -22,6 +22,7 @@ Placeholder: add one comparable Theme 1 project or inspiration after browsing th
 - Three active stamps selected each run
 - Clickable visible relics and decoys
 - Neutral inspect modal that does not leak decoy/correct state before a guess
+- Custom SVG relic/decoy icons replace the earlier prototype symbols
 - No harsh penalty for wrong guesses
 - Final reveal points to the Postmark 250 collector sheet
 - Distinct route and docs from the Postmark 250 gallery

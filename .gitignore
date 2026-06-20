@@ -17,6 +17,8 @@ BUILD_RECEIPT_POSTMARK_ARCHIVE_V*.md
 
 # Local review pasteouts
 docs/Review*.txt
+docs/Reivew*.txt
+docs/review*.txt
 
 # Local/cache
 .cache

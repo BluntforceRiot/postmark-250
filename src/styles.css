@@ -975,11 +975,11 @@ main {
 }
 
 .room-object.relic {
-  border-color: rgba(216, 175, 102, 0.18);
+  border-color: transparent;
 }
 
 .room-object.decoy {
-  border-color: rgba(177, 139, 91, 0.14);
+  border-color: transparent;
 }
 
 .room-object.matched {
@@ -1004,18 +1004,45 @@ main {
 .room-object:hover,
 .room-object:focus-visible {
   outline: 3px solid rgba(255, 239, 181, 0.78);
-  background: rgba(255, 239, 181, 0.06);
+  background: rgba(255, 239, 181, 0.035);
   filter: brightness(1.16);
   transform: translateY(-2px);
+}
+
+.object-display-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: min(76px, 84%);
+  min-width: 52px;
+  aspect-ratio: 1.18;
+  padding: 5px;
+  border: 1px solid rgba(216, 175, 102, 0.06);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 241, 189, 0.045), transparent 58%),
+    rgba(7, 12, 23, 0.035);
+  box-shadow: none;
+}
+
+.room-object.relic .object-display-card {
+  border-color: rgba(216, 175, 102, 0.1);
+}
+
+.room-object:hover .object-display-card,
+.room-object:focus-visible .object-display-card {
+  border-color: rgba(255, 239, 181, 0.66);
+  box-shadow: 0 0 18px rgba(216, 175, 102, 0.18), inset 0 0 0 1px rgba(247, 234, 208, 0.08);
 }
 
 .object-art {
   position: relative;
   display: block;
   z-index: 1;
-  width: min(66px, 78%);
-  min-width: 44px;
-  height: 44px;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  object-fit: contain;
   filter: drop-shadow(0 7px 6px rgba(0, 0, 0, 0.42));
 }
 
@@ -1026,9 +1053,9 @@ main {
 }
 
 .object-art.large {
-  width: min(190px, 76%);
-  height: 150px;
-  min-width: 150px;
+  width: min(230px, 84%);
+  height: min(210px, 70%);
+  min-width: 0;
 }
 
 .object-room-label {
@@ -1036,11 +1063,17 @@ main {
   z-index: 1;
   padding: 2px 5px;
   border: 1px solid rgba(216, 175, 102, 0.44);
-  background: rgba(7, 12, 23, 0.68);
+  background: rgba(7, 12, 23, 0.78);
   color: #fff1bd;
-  font-size: clamp(0.56rem, 0.74vw, 0.68rem);
+  font-size: clamp(0.5rem, 0.66vw, 0.62rem);
   letter-spacing: 0.06em;
-  opacity: 0.86;
+  opacity: 0.7;
+  transform: translateY(-3px);
+}
+
+.room-object:hover .object-room-label,
+.room-object:focus-visible .object-room-label {
+  opacity: 1;
 }
 
 .visual-stone .object-art::before {
@@ -1488,13 +1521,30 @@ main {
     #211827;
 }
 
+.inspect-icon-frame {
+  display: grid;
+  place-items: center;
+  width: min(100%, 260px);
+  aspect-ratio: 1.15;
+  padding: 14px;
+  border: 1px solid rgba(216, 175, 102, 0.42);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(216, 175, 102, 0.16), transparent 62%),
+    rgba(7, 12, 23, 0.34);
+  box-shadow: inset 0 0 0 1px rgba(247, 234, 208, 0.05), 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
 .relic-object-preview strong {
-  padding: 4px 8px;
+  max-width: 90%;
+  padding: 5px 9px;
   border: 1px solid rgba(216, 175, 102, 0.5);
   background: rgba(7, 12, 23, 0.82);
   color: #fff1bd;
   font-size: 0.82rem;
   font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .relic-inspect-copy {

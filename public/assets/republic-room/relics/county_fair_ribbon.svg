@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>County fair ribbon</title>
+  <circle cx="32" cy="23" r="13" fill="#8c2f2d" stroke="#dfc48d" stroke-width="3"/>
+  <circle cx="32" cy="23" r="6" fill="#fff1bd"/>
+  <path d="M23 34l-5 22 14-8 14 8-5-22" fill="#c89848" stroke="#1a1320" stroke-width="3"/>
+  <path d="M18 57h28" stroke="#101a2f" stroke-width="4"/>
+</svg>

@@ -19,7 +19,7 @@ A clickable commemorative stamp sheet of American memory. The collector sheet is
 
 ### The Republic Room: A Postmark 250 Puzzle Kiosk
 
-A tiny retro point-and-click archive puzzle. Each run selects three Postmark 250 stamps. Players inspect visible relics and decoys, match the correct relics to the active stamps, and unlock the memory cabinet.
+A tiny retro point-and-click archive puzzle. Each run selects three Postmark 250 stamps. Players inspect visible custom SVG relics and decoys, match the correct relics to the active stamps, and unlock the memory cabinet.
 
 ## Run Locally
 

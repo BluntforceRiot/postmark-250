@@ -29,6 +29,7 @@ interface RoomObject {
   objectName: string;
   clue: string;
   iconLabel: string;
+  iconFile: string;
   slotId: string;
   stampId?: string;
   relicName?: string;
@@ -49,6 +50,7 @@ const paths = {
   collectorSheet: './assets/postmark_250_full_collector_sheet.png',
   highRes: './assets/stamps/high_res/',
   collectorCrops: './assets/stamps/collector_crops/',
+  relicIcons: './assets/republic-room/relics/',
   metadata: './assets/metadata/layout_metadata.json'
 };
 
@@ -85,6 +87,7 @@ const loadMetadata = async (): Promise<LayoutMetadata> => {
 
 const stampImagePath = (stamp: StampMemory) => `${paths.highRes}${stamp.highResFile}`;
 const cropImagePath = (stamp: StampMemory) => `${paths.collectorCrops}${stamp.collectorCropFile}`;
+const relicIconPath = (object: RoomObject) => `${paths.relicIcons}${object.iconFile}`;
 
 const escapeHtml = (value: string) =>
   value
@@ -429,6 +432,7 @@ const relicToRoomObject = (relic: RelicMemory, slotId: string): RoomObject => ({
   objectName: relic.objectName,
   clue: relic.clue,
   iconLabel: relic.iconLabel,
+  iconFile: relic.iconFile,
   slotId
 });
 
@@ -438,6 +442,7 @@ const decoyToRoomObject = (decoy: DecoyObject, slotId: string): RoomObject => ({
   objectName: decoy.objectName,
   clue: decoy.clue,
   iconLabel: decoy.iconLabel,
+  iconFile: decoy.iconFile,
   slotId
 });
 
@@ -527,8 +532,10 @@ const renderRoomObjects = (run: RepublicRun) =>
           style="${style}"
           aria-label="Inspect ${escapeAttribute(object.objectName)}"
         >
-          <span class="object-art" aria-hidden="true"></span>
-          <span class="object-room-label">${escapeHtml(object.iconLabel)}</span>
+          <span class="object-display-card">
+            <img class="object-art" src="${relicIconPath(object)}" alt="" aria-hidden="true" />
+          </span>
+          <span class="object-room-label" aria-hidden="true">${escapeHtml(object.iconLabel)}</span>
           <span class="sr-only">${escapeHtml(object.objectName)}</span>
         </button>
       `;
@@ -597,8 +604,10 @@ const renderInspectModal = (run: RepublicRun) => {
         <button class="modal-close" type="button" data-republic-close aria-label="Close relic inspection">Close</button>
         <div class="relic-inspect-grid">
           <div class="relic-object-preview ${object.kind} ${objectVisualClass(object.iconLabel)}">
-            <span class="object-art large" aria-hidden="true"></span>
-            <strong>${escapeHtml(object.iconLabel)}</strong>
+            <div class="inspect-icon-frame">
+              <img class="object-art large" src="${relicIconPath(object)}" alt="" aria-hidden="true" />
+            </div>
+            <strong>${escapeHtml(object.objectName)}</strong>
           </div>
           <div class="relic-inspect-copy">
             <p class="modal-number">RELIC INSPECTION</p>
